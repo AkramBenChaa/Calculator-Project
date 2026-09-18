@@ -1,0 +1,102 @@
+:root{
+    --firstColor: rgba(19, 23, 33, 0.5);
+    --sacendColor: rgba(91, 99, 120, 0.35);
+    --theredColor: rgba(101, 76, 159, 0.4);
+    --theredColorHover: rgba(100, 39, 241, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --borderRadius: 30px;
+    --fontWeight: Bolder;
+    --fontColor: rgb(251, 248, 248);
+    --fontSize: 45px;
+    --button: 80px;
+    --buttonFrontSize: 30px;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+    background-image:url(./background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#calculator_container{
+    border:5px var(--glass-border) solid ;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--firstColor);
+    width: fit-content;
+    padding: 20px;
+    padding-top: 5px;
+    align-items: center;
+    border-radius: var(--borderRadius);
+    margin: 10px auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(200, 204, 214, 0.1);
+
+
+}
+
+#display_area{
+    font-family:'Times New Roman', Times, serif;
+    border:5px var(--glass-border) solid ;
+    background-color: var(--sacendColor);
+    width: 340px;
+    height: 90px;
+    margin-bottom: 10px;
+    border-radius: var(--borderRadius);
+    padding: 10px 20px;
+    display: flex;
+    color: var(--fontColor);
+    align-items: center;
+    font-size:var(--fontSize);
+    text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black;
+}
+
+.calculator_row{
+    margin: 5px auto; /* 50px => top and bottom | auto => left and right*/
+}
+
+.calculator_row button{
+    width: var(--button);
+    height: var(--button);
+    font-size: var(--buttonFrontSize);
+    font-weight: var(--fontWeight);
+    border: 2px var(--glass-border) solid;
+    margin: 5px;
+    border-radius: var(--borderRadius);
+    background-color: var(--theredColor);
+    color: white;
+    transition: 0.1s;
+    text-shadow:
+                1px 1px 0 rgba(0, 0, 0, 0.578),
+                -1px -1px 0 rgba(0, 0, 0, 0.578),
+                1px -1px 0 rgba(0, 0, 0, 0.578),
+                -1px 1px 0 rgba(0, 0, 0, 0.578);
+}
+
+.calculator_row button:hover{
+    background-color: var(--theredColorHover);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#text {
+    padding: 0;
+    display: flex;
+    margin: 0;
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 15px;
+}
