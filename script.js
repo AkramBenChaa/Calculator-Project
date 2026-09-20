@@ -61,7 +61,7 @@ function clear() {
 function addToDisplayArea(value) {
     if (
         displayArea.textContent === "Invalaid Opration" ||
-        displayArea.textContent === "Limit Reached" ||
+        displayArea.textContent === "Limit" ||
         displayArea.textContent === "Infinity"
     ) {
         clear();
@@ -80,7 +80,7 @@ function addToDisplayArea(value) {
 // Delate One Value:
 function deleteOneValue() {
     let currentContent = displayArea.textContent;
-    if (currentContent === "Limit Reached" || currentContent === "Invalaid Opration" || currentContent === "Infinity") {
+    if (currentContent === "Limit" || currentContent === "Invalaid Opration" || currentContent === "Infinity") {
         clear();
     } else {
         displayArea.textContent = currentContent.substring(0, currentContent.length - 1);
