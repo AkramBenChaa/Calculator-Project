@@ -1,6 +1,6 @@
 // Get Element:
-const calculatorContainer = document.getElementById('calculator_container');
-const displayArea = document.getElementById('display_area');
+const calculatorContainer = document.getElementById("calculator_container");
+const displayArea = document.getElementById("display_area");
 let canAddNumber = true;
 
 // Adjust the font size as needed:
@@ -8,14 +8,16 @@ function adjustFontSize() {
     const display = document.querySelector("#display_area");
     let fontSize = 40;
     display.style.fontSize = `${fontSize}px`;
-    while (display.scrollWidth > display.clientWidth && fontSize > 15) { // Decrease font size
+    while (display.scrollWidth > display.clientWidth && fontSize > 15) {
+        // Decrease font size
         fontSize--;
         display.style.fontSize = `${fontSize}px`;
         if (fontSize === 15) {
             canAddNumber = false;
-        };
+        }
     }
-    while (display.scrollWidth < display.clientWidth && fontSize < 40) { // Increase font size
+    while (display.scrollWidth < display.clientWidth && fontSize < 40) {
+        // Increase font size
         fontSize++;
         display.style.fontSize = `${fontSize}px`;
     }
@@ -26,18 +28,18 @@ function audio() {
     const soundClick = new Audio("./click sound effect.mp3");
     soundClick.volume = 0.1;
     soundClick.play();
-};
+}
 
 // Add Event Listener:
 calculatorContainer.addEventListener("click", (e) => {
-    if (e.target.nodeName !== 'BUTTON') return; // If "target.nodeName" is not 'BUTTON' , return nothing.
+    if (e.target.nodeName !== "BUTTON") return; // If "target.nodeName" is not 'BUTTON' , return nothing.
     audio();
     switch (e.target.textContent) {
         case "C":
             clear(); // Clear All From Display
             break;
         case "DEL":
-            deleteOneValue() // Delate Only One Value
+            deleteOneValue(); // Delate Only One Value
             adjustFontSize();
             break;
         case "=":
@@ -48,19 +50,23 @@ calculatorContainer.addEventListener("click", (e) => {
             adjustFontSize();
             break;
     }
-})
-
+});
 
 // Clear All:
 function clear() {
     displayArea.textContent = "";
-};
+}
 
 // Add Value In Display Area:
 function addToDisplayArea(value) {
-    if (displayArea.textContent === "Invalaid Opration" || displayArea.textContent === "Limit Reached" || displayArea.textContent === "Infinity") {
+    if (
+        displayArea.textContent === "Invalaid Opration" ||
+        displayArea.textContent === "Limit Reached" ||
+        displayArea.textContent === "Infinity"
+    ) {
         clear();
-    } if (canAddNumber === false) {
+    }
+    if (canAddNumber === false) {
         clear();
         canAddNumber = true;
         displayArea.textContent = "Limit Reached";
@@ -69,7 +75,7 @@ function addToDisplayArea(value) {
         displayArea.style.color = " rgb(251, 248, 248)";
         displayArea.textContent += value;
     }
-};
+}
 
 // Delate One Value:
 function deleteOneValue() {
@@ -79,7 +85,7 @@ function deleteOneValue() {
     } else {
         displayArea.textContent = currentContent.substring(0, currentContent.length - 1);
     }
-};
+}
 
 // Evaluate Number:
 function evaluate() {
@@ -98,7 +104,7 @@ function evaluate() {
 
 function changeStyle() {
     displayArea.style.cssText = `
-            font-size: 35px;
+            font-size: 25px;
             color: rgba(255, 0, 0, 0.79);
             justify-content: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
