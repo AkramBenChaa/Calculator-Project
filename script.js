@@ -69,7 +69,7 @@ function addToDisplayArea(value) {
     if (canAddNumber === false) {
         clear();
         canAddNumber = true;
-        displayArea.textContent = "Limit Reached";
+        displayArea.textContent = "Limit";
         changeStyle();
     } else {
         displayArea.style.color = " rgb(251, 248, 248)";
