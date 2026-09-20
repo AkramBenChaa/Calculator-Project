@@ -1,16 +1,16 @@
-# Calculator Web App
+# Akram Math Calculator
 
-A simple and modern calculator web application built with **HTML, CSS, and JavaScript**.
+A responsive calculator web application built with **HTML, CSS, and JavaScript**.
 
 ## Features
 
 - Basic arithmetic operations
-- Clear (`C`) and delete (`DEL`) functions
-- Error handling for invalid operations
-- Button click sound effects
-- Automatic font-size adjustment for long numbers
-- Input limit when the display reaches its minimum font size
-- Responsive and clean user interface
+- Clear (C) and delete (DEL) controls
+- Invalid-operation error handling
+- Click sound feedback
+- Automatic font-size adjustment for long expressions
+- Display limit handling
+- Responsive layout
 
 ## Technologies
 
@@ -19,17 +19,32 @@ A simple and modern calculator web application built with **HTML, CSS, and JavaS
 - JavaScript
 - Math.js
 
-## Purpose
+## What I Practiced
 
-This project was created as a practical project to apply my knowledge of **JavaScript, DOM manipulation, event listeners, functions, conditions, and loops** while improving my problem-solving and debugging skills.
+- DOM manipulation
+- Event listeners
+- Error handling
+- Responsive CSS
+- Dynamic UI updates
+- Debugging and iterative development
 
-## Preview
+## Project Structure
 
-![Calculator Preview](preview.png)
+```text
+Calculator-Project/
+├── index.html
+├── style.css
+├── script.js
+├── background-image.jpg
+└── click sound effect.mp3
+```
+
+## Run the Project
+
+Open `index.html` in a modern web browser.
+
+No build tools are required.
 
 ## Author
 
 **Akram Ben Chaa**
-:::
-
-2026-08-26-21-28
