@@ -104,8 +104,8 @@ function evaluate() {
 
 function changeStyle() {
     displayArea.style.cssText = `
-            font-size: 25px;
-            color: rgba(255, 0, 0, 0.79);
+            font-size: 25sspx;
+            color: rgba(139, 4, 4, 0.97);
             justify-content: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         `;
