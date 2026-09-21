@@ -25,7 +25,7 @@ function adjustFontSize() {
 
 // Sound Click:
 function audio() {
-    const soundClick = new Audio("./click sound effect.mp3");
+    const soundClick = new Audio("./click-sound-effect.mp3");
     soundClick.volume = 0.1;
     soundClick.play();
 }
